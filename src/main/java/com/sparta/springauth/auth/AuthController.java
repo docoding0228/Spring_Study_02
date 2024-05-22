@@ -46,6 +46,7 @@ public class AuthController {
     public String getSession(HttpServletRequest req) {
         // 세션이 존재할 경우 세션 반환, 없을 경우 null 반환
         HttpSession session = req.getSession(false);
+        //
 
         String value = (String) session.getAttribute(AUTHORIZATION_HEADER); // 가져온 세션에 저장된 Value 를 Name 을 사용하여 가져옵니다.
         System.out.println("value = " + value);
